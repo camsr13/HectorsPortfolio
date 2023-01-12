@@ -4,6 +4,11 @@ const nextConfig = {
     config.experiments = { ...config.experiments, topLevelAwait: true }
     return config
   },
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
+
   images: {
     remotePatterns: [
       {
