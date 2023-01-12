@@ -18,7 +18,7 @@ export default function HomePageImage({ image }) {
     <div className={styles.wrapper}>
       {homepageImage && (
         <Image
-          src={urlFor(homepageImage).width(1500).url()}
+          src={urlFor(homepageImage).width(1000).quality(65).url()}
           className={styles.image}
           layout="fill"
           alt="Fergus Haywood Homepage Gif Image"

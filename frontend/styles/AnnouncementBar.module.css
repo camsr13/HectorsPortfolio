@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   max-width: 350px;
-  margin-inline: 20px;
+  margin-right: 20px;
   height: 32px;
   grid-column: 2 / span 2;
 }
