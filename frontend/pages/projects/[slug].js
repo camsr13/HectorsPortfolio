@@ -1,4 +1,3 @@
-import Layout from '../../components/Layout'
 import MobileProjectSlideshow from '../../components/MobileProjectSlideshow'
 import ProjectList from '../../components/ProjectList'
 import styles from '../../styles/Projects.module.css'

@@ -1,14 +1,8 @@
 {
   "/_app": "pages/_app.js",
-  "/api/contact": "pages/api/contact.js",
-  "/api/hello": "pages/api/hello.js",
   "/_error": "pages/_error.js",
-  "/clients": "pages/clients.js",
-  "/projects": "pages/projects.js",
-  "/": "pages/index.js",
-  "/projects/[slug]": "pages/projects/[slug].js",
   "/_document": "pages/_document.js",
-  "/en/404": "pages/en/404.html",
-  "/en/500": "pages/en/500.html",
-  "/en/contact": "pages/en/contact.html"
+  "/clients": "pages/clients.js",
+  "/": "pages/index.js",
+  "/projects": "pages/projects.js"
 }
