@@ -1,7 +1,6 @@
 
 .aboutContent { 
   grid-column: 3 / span 3;
-  max-width: 450px;
   height: fit-content;
 }
 
