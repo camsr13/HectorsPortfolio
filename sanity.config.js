@@ -2,6 +2,8 @@
 
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
+import { visionTool } from '@sanity/vision'
+
 import blockContent from './studio/schemas/blockContent'
 import category from './studio/schemas/category'
 import navigation from './studio/schemas/documents/navigation'
@@ -18,7 +20,7 @@ export default defineConfig({
   projectId: '36om7i3d',
   basePath: '/studio',
   dataset: 'production',
-  plugins: [deskTool()],
+  plugins: [deskTool(), visionTool()],
   schema: {
     types: [
       navigation,
