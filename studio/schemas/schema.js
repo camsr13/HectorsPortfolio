@@ -7,7 +7,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // We import object and document schemas
 import blockContent from './blockContent'
 import category from './category'
-import project from './project'
 import navigation from './documents/navigation'
 import siteConfig from './siteConfig'
 import Clients from './documents/Clients'
