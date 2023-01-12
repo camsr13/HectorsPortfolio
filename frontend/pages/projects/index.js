@@ -22,5 +22,6 @@ export async function getStaticProps() {
       navigationBody,
       projects,
     },
+    revalidate: 10,
   }
 }

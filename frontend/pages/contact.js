@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Layout from '../components/Layout'
 
-export default function Contact(props) {
+export default function Contact() {
   // States for contact form fields
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -126,15 +126,4 @@ export default function Contact(props) {
       </div>
     </>
   )
-}
-export async function getStaticProps() {
-  const navigationQuery = encodeURIComponent(`*[ _type == 'navigation']`)
-  const navigationURL = `https://36om7i3d.api.sanity.io/v1/data/query/production?query=[${navigationQuery}]`
-  const navigationBody = await fetch(navigationURL).then((res) => res.json())
-
-  return {
-    props: {
-      navigationBody,
-    },
-  }
 }
