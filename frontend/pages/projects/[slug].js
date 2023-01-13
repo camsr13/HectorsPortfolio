@@ -21,7 +21,7 @@ export default function Project(props) {
 
   return (
     <>
-      <ProjectList projects={projectList} />
+      <ProjectList projects={projectList} liveProject={projectContent.title} />
       <MobileProjectSlideshow project={projectContent} />
       <div className={styles.projectContent}>
         <div className={styles.projectContentInner}>
@@ -62,7 +62,8 @@ export default function Project(props) {
                 <Image
                   src={urlFor(image.image).width(1500).quality(100).url()}
                   className={styles.projectImage}
-                  layout="fill"
+                  width="700"
+                  height="400"
                   placeholder="blur"
                   blurDataURL={urlFor(image.image).width(1500).url()}
                   alt={projectContent.title}
