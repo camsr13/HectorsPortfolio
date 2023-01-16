@@ -84,6 +84,7 @@ a {
 
 .navItem { 
   cursor: pointer;
+  height: 22px;
   transition: color var(--short-transition);
 }
 
