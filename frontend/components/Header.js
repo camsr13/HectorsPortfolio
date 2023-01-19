@@ -11,7 +11,9 @@ export default function Header({ content }) {
 
   function handleClick() {
     document.body.removeAttribute('style')
-    setActive((current) => !current)
+    if (isActive) {
+      setActive(false)
+    }
   }
 
   return (
