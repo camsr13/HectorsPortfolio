@@ -6,7 +6,6 @@ import CurrentTime from '../components/CurrentTime'
 import MobileNavigation from '../components/MobileNavigation'
 
 export default function Header({ content }) {
-  const [menuStatus, setMenuStatus] = useState('Menu')
   const [isActive, setActive] = useState(false)
 
   function handleClick() {
