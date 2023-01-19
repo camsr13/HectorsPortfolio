@@ -1,17 +1,20 @@
 import styles from '../styles/MobileNavigation.module.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-export default function MobileNavigation({ items }) {
-  const [menuStatus, setMenuStatus] = useState('Menu')
-  const [isActive, setActive] = useState(false)
-
+export default function MobileNavigation({ items, isActive, setActive }) {
   const mainNav = items.result[0][0].navItems
   const socialNav = items.result[0][1].navItems
 
-  function handleClick(e) {
-    menuStatus === 'Menu' ? setMenuStatus('Close') : setMenuStatus('Menu')
+  const [menuStatus, setMenuStatus] = useState('Menu')
+
+  useEffect(() => {
+    isActive ? setMenuStatus('Close') : setMenuStatus('Menu')
+  }, [isActive])
+
+  function handleClick() {
     setActive((current) => !current)
+    !isActive ? setMenuStatus('Close') : setMenuStatus('Menu')
   }
 
   function handleNavClick() {
