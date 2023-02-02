@@ -85,6 +85,9 @@ a {
   color: var(--accent-color) !important;
 }
 
+.navItem a { 
+  cursor: pointer;
+}
 .navItem { 
   cursor: pointer;
   height: 22px;

@@ -33,7 +33,6 @@ export default defineConfig({
       projectImages,
       projectDisciplines,
       category,
-
       blockContent,
     ],
   },
