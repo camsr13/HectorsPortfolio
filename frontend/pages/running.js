@@ -17,7 +17,6 @@ export async function getStaticProps() {
   const data = await fetch('https://fergushaywood.com/api/strava').then((res) =>
     res.json()
   )
-  console.log('data from frontend', data)
   return {
     props: {
       data: data,
