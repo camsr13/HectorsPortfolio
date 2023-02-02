@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Layout from '../components/Layout'
 
 export default function Contact() {
   // States for contact form fields

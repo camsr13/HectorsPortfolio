@@ -5,10 +5,13 @@ import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from '@sanity/block-content-to-react'
 import Image from 'next/image'
 import { Fragment } from 'react'
+import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
 export default function Project(props) {
   const projectContent = props.project.result[0][0]
   const projectList = props.projects.result[0]
+  const router = useRouter()
 
   function urlFor(source) {
     return imgBuilder.image(source)
@@ -23,7 +26,27 @@ export default function Project(props) {
     <>
       <ProjectList projects={projectList} liveProject={projectContent.title} />
       <MobileProjectSlideshow project={projectContent} />
-      <div className={styles.projectContent}>
+      <motion.div
+        className={styles.projectContent}
+        key={router.asPath}
+        initial="initialState"
+        animate="animateState"
+        exit="exitState"
+        transition={{
+          duration: 0.65,
+        }}
+        variants={{
+          initialState: {
+            opacity: 0,
+          },
+          animateState: {
+            opacity: 1,
+          },
+          exitState: {
+            opacity: 0,
+          },
+        }}
+      >
         <div className={styles.projectContentInner}>
           <BlockContent blocks={projectContent.body} />
           {projectContent.extraCredits && (
@@ -53,8 +76,26 @@ export default function Project(props) {
             />
           </a>
         </div>
-      </div>
-      <div className={styles.projectImages}>
+      </motion.div>
+      <motion.div
+        className={styles.projectImages}
+        key={projectContent.title}
+        initial="initialState"
+        animate="animateState"
+        exit="exitState"
+        transition={{
+          duration: 0.35,
+        }}
+        variants={{
+          initialState: {
+            opacity: 0,
+          },
+          animateState: {
+            opacity: 1,
+          },
+          exitState: {},
+        }}
+      >
         {projectContent.projectImages.map((image, i) => {
           return (
             <Fragment key={i}>
@@ -72,7 +113,7 @@ export default function Project(props) {
             </Fragment>
           )
         })}
-      </div>
+      </motion.div>
     </>
   )
 }

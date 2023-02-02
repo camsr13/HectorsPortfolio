@@ -1,8 +1,7 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout'
 import Script from 'next/script'
-import { useState, useEffect, use } from 'react'
-import Router from 'next/router'
+import { AnimatePresence } from 'framer-motion'
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -23,7 +22,9 @@ export default function MyApp({ Component, pageProps }) {
     `}
       </Script>
       <Layout>
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </Layout>
     </>
   )

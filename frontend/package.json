@@ -13,6 +13,7 @@
     "@sanity/image-url": "1.0.1",
     "@sendgrid/mail": "^7.7.0",
     "eslint-config-next": "^13.0.7",
+    "framer-motion": "^9.0.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.38",
     "next": "^13.1.1",
