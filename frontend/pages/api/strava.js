@@ -15,25 +15,12 @@ async function getAccessToken() {
     grant_type: 'refresh_token',
   })
 
-  // const reAuthorize = await fetch('https://www.strava.com/oauth/token', {
-  //   headers: headers,
-  //   body: body,
-  //   method: 'POST',
-  // })
-
-  const reAuthorize = await fetch('https://www.strava.com/oauth/token', {
-    headers,
-    body,
-    method: 'POST',
-  })
-
   const authorize = await fetch('https://www.strava.com/oauth/token', {
     headers,
     method: 'POST',
     body,
   }).then((res) => res.json())
 
-  console.log(authorize)
   return authorize.access_token
 }
 
@@ -43,8 +30,7 @@ export default async (req, res) => {
 
   const response = await fetch(
     `https://www.strava.com/api/v3/athletes/${athleteId}/stats?access_token=${access_token}`
-  )
-  const data = await response.json()
+  ).then((res) => res.json())
 
-  return res.status(200).json(data)
+  return res.status(200).json(response)
 }
