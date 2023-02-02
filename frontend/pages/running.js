@@ -14,7 +14,7 @@ export default function Running({ data }) {
 }
 
 export async function getStaticProps() {
-  const data = await fetch('http://localhost:3000/api/strava').then((res) =>
+  const data = await fetch('https://fergushaywood.com/api/strava').then((res) =>
     res.json()
   )
   console.log('data from frontend', data)
