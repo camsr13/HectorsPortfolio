@@ -32,5 +32,5 @@ export default async (req, res) => {
     `https://www.strava.com/api/v3/athletes/${athleteId}/stats?access_token=${access_token}`
   ).then((res) => res.json())
 
-  return res.status(200).json(response)
+  return res.json(response)
 }
