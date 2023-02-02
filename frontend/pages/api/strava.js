@@ -26,6 +26,7 @@ async function getAccessToken() {
 
 export default async (req, res) => {
   const athleteId = 63544607
+  let test
   const access_token = await getAccessToken()
 
   const response = await fetch(
