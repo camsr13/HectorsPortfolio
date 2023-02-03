@@ -22,7 +22,7 @@ export default function MyApp({ Component, pageProps }) {
     `}
       </Script>
       <Layout>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence mode="wait">
           <Component {...pageProps} />
         </AnimatePresence>
       </Layout>
