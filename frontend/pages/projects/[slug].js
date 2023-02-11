@@ -127,6 +127,8 @@ export async function getStaticPaths() {
     params: { slug: project.id },
   }))
 
+  console.log(paths)
+
   return {
     paths,
     fallback: false,

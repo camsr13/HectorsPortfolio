@@ -1,5 +1,6 @@
 .wrapper { 
 grid-column: 4 / span 2; 
+min-height: 41px;
 }
 
 .time { 
