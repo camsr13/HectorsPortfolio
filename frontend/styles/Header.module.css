@@ -11,6 +11,7 @@
   z-index: 99;
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color);
+  min-height: 71px;
 }
 
 .title { 
