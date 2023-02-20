@@ -4,3 +4,4 @@ node_modules
 frontend/.next*
 .vercel
 frontend/.env*
+frontend/dist*

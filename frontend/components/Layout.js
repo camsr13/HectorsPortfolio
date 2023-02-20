@@ -5,7 +5,7 @@ import Navigation from './Navigation'
 
 const data = await fetchData()
 
-export default function Layout(props) {
+export default function Layout({ children }) {
   const siteSettings = data.settingsBody.result[0][0]
   const navContent = data.navigationBody
 
@@ -27,7 +27,7 @@ export default function Layout(props) {
       <Navigation content={navContent} />
       <Header content={navContent} />
 
-      <main className="main-wrapper">{props.children}</main>
+      <main className="main-wrapper">{children}</main>
       <Footer />
     </>
   )
