@@ -5,7 +5,7 @@ exports.id = 660;
 exports.ids = [660];
 exports.modules = {
 
-/***/ 7081:
+/***/ 2940:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -77,6 +77,7 @@ function _interopRequireWildcard(obj) {
     }
     return newObj;
 }
+/** Set of pages that have triggered a large data warning on production mode. */ const largePageDataWarnings = new Set();
 function getDocumentFiles(buildManifest, pathname, inAmpMode) {
     const sharedFiles = (0, _getPageFiles).getPageFiles(buildManifest, "/_app");
     const pageFiles =  true && inAmpMode ? [] : (0, _getPageFiles).getPageFiles(buildManifest, pathname);
@@ -252,15 +253,15 @@ function getHeadHTMLProps(props) {
 function getAmpPath(ampPath, asPath) {
     return ampPath || `${asPath}${asPath.includes("?") ? "&" : "?"}amp=1`;
 }
-function getFontLoaderLinks(fontLoaderManifest, dangerousAsPath, assetPrefix = "") {
-    if (!fontLoaderManifest) {
+function getNextFontLinkTags(nextFontManifest, dangerousAsPath, assetPrefix = "") {
+    if (!nextFontManifest) {
         return {
             preconnect: null,
             preload: null
         };
     }
-    const appFontsEntry = fontLoaderManifest.pages["/_app"];
-    const pageFontsEntry = fontLoaderManifest.pages[dangerousAsPath];
+    const appFontsEntry = nextFontManifest.pages["/_app"];
+    const pageFontsEntry = nextFontManifest.pages[dangerousAsPath];
     const preloadedFontFiles = [
         ...appFontsEntry ?? [],
         ...pageFontsEntry ?? []
@@ -269,6 +270,7 @@ function getFontLoaderLinks(fontLoaderManifest, dangerousAsPath, assetPrefix = "
     const preconnectToSelf = !!(preloadedFontFiles.length === 0 && (appFontsEntry || pageFontsEntry));
     return {
         preconnect: preconnectToSelf ? /*#__PURE__*/ _react.default.createElement("link", {
+            "data-next-font": nextFontManifest.pagesUsingSizeAdjust ? "size-adjust" : "",
             rel: "preconnect",
             href: "/",
             crossOrigin: "anonymous"
@@ -281,13 +283,16 @@ function getFontLoaderLinks(fontLoaderManifest, dangerousAsPath, assetPrefix = "
                 href: `${assetPrefix}/_next/${encodeURI(fontFile)}`,
                 as: "font",
                 type: `font/${ext}`,
-                crossOrigin: "anonymous"
+                crossOrigin: "anonymous",
+                "data-next-font": fontFile.includes("-s") ? "size-adjust" : ""
             });
         }) : null
     };
 }
 class Head extends _react.default.Component {
-    static contextType = _htmlContext.HtmlContext;
+    static{
+        this.contextType = _htmlContext.HtmlContext;
+    }
     getCssLinks(files) {
         const { assetPrefix , devOnlyCacheBusterQueryString , dynamicImports , crossOrigin , optimizeCss , optimizeFonts  } = this.context;
         const cssFiles = files.allFiles.filter((f)=>f.endsWith(".css"));
@@ -420,17 +425,17 @@ class Head extends _react.default.Component {
                 };
                 return /*#__PURE__*/ _react.default.cloneElement(c, newProps);
             } else if (c == null ? void 0 : (ref3 = c.props) == null ? void 0 : ref3.children) {
-                const newProps1 = {
+                const newProps = {
                     ...c.props || {},
                     children: this.makeStylesheetInert(c.props.children)
                 };
-                return /*#__PURE__*/ _react.default.cloneElement(c, newProps1);
+                return /*#__PURE__*/ _react.default.cloneElement(c, newProps);
             }
             return c;
         }).filter(Boolean);
     }
     render() {
-        const { styles , ampPath , inAmpMode , hybridAmp , canonicalBase , __NEXT_DATA__ , dangerousAsPath , headTags , unstable_runtimeJS , unstable_JsPreload , disableOptimizedLoading , optimizeCss , optimizeFonts , assetPrefix , fontLoaderManifest  } = this.context;
+        const { styles , ampPath , inAmpMode , hybridAmp , canonicalBase , __NEXT_DATA__ , dangerousAsPath , headTags , unstable_runtimeJS , unstable_JsPreload , disableOptimizedLoading , optimizeCss , optimizeFonts , assetPrefix , nextFontManifest  } = this.context;
         const disableRuntimeJS = unstable_runtimeJS === false;
         const disableJsPreload = unstable_JsPreload === false || !disableOptimizedLoading;
         this.context.docComponentsRendered.Head = true;
@@ -439,10 +444,23 @@ class Head extends _react.default.Component {
         let otherHeadElements = [];
         if (head) {
             head.forEach((c)=>{
+                let metaTag;
+                if (this.context.strictNextHead) {
+                    metaTag = /*#__PURE__*/ _react.default.createElement("meta", {
+                        name: "next-head",
+                        content: "1"
+                    });
+                }
                 if (c && c.type === "link" && c.props["rel"] === "preload" && c.props["as"] === "style") {
+                    metaTag && cssPreloads.push(metaTag);
                     cssPreloads.push(c);
                 } else {
-                    c && otherHeadElements.push(c);
+                    if (c) {
+                        if (metaTag && (c.type !== "meta" || !c.props["charSet"])) {
+                            otherHeadElements.push(metaTag);
+                        }
+                        otherHeadElements.push(c);
+                    }
                 }
             });
             head = cssPreloads.concat(otherHeadElements);
@@ -491,7 +509,7 @@ class Head extends _react.default.Component {
             return child;
         });
         const files = getDocumentFiles(this.context.buildManifest, this.context.__NEXT_DATA__.page,  true && inAmpMode);
-        const fontLoaderLinks = getFontLoaderLinks(fontLoaderManifest, dangerousAsPath, assetPrefix);
+        const nextFontLinkTags = getNextFontLinkTags(nextFontManifest, dangerousAsPath, assetPrefix);
         return /*#__PURE__*/ _react.default.createElement("head", Object.assign({}, getHeadHTMLProps(this.props)), this.context.isDevelopment && /*#__PURE__*/ _react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/ _react.default.createElement("style", {
             "data-next-hide-fouc": true,
             "data-ampdevmode":  true && inAmpMode ? "true" : undefined,
@@ -505,12 +523,12 @@ class Head extends _react.default.Component {
             dangerouslySetInnerHTML: {
                 __html: `body{display:block}`
             }
-        }))), head, /*#__PURE__*/ _react.default.createElement("meta", {
+        }))), head, this.context.strictNextHead ? null : /*#__PURE__*/ _react.default.createElement("meta", {
             name: "next-head-count",
             content: _react.default.Children.count(head || []).toString()
         }), children, optimizeFonts && /*#__PURE__*/ _react.default.createElement("meta", {
             name: "next-font-preconnect"
-        }), fontLoaderLinks.preconnect, fontLoaderLinks.preload,  true && inAmpMode && /*#__PURE__*/ _react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/ _react.default.createElement("meta", {
+        }), nextFontLinkTags.preconnect, nextFontLinkTags.preload,  true && inAmpMode && /*#__PURE__*/ _react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/ _react.default.createElement("meta", {
             name: "viewport",
             content: "width=device-width,minimum-scale=1,initial-scale=1"
         }), !hasCanonicalRel && /*#__PURE__*/ _react.default.createElement("link", {
@@ -594,7 +612,9 @@ function handleDocumentScriptLoaderItems(scriptLoader, __NEXT_DATA__, props) {
     __NEXT_DATA__.scriptLoader = scriptLoaderItems;
 }
 class NextScript extends _react.default.Component {
-    static contextType = _htmlContext.HtmlContext;
+    static{
+        this.contextType = _htmlContext.HtmlContext;
+    }
     getDynamicChunks(files) {
         return getDynamicChunks(this.context, this.props, files);
     }
@@ -611,9 +631,15 @@ class NextScript extends _react.default.Component {
         const { __NEXT_DATA__ , largePageDataBytes  } = context;
         try {
             const data = JSON.stringify(__NEXT_DATA__);
+            if (largePageDataWarnings.has(__NEXT_DATA__.page)) {
+                return (0, _htmlescape).htmlEscapeJsonString(data);
+            }
             const bytes =  false ? 0 : Buffer.from(data).byteLength;
             const prettyBytes = (__webpack_require__(5955)/* ["default"] */ .Z);
             if (largePageDataBytes && bytes > largePageDataBytes) {
+                if (true) {
+                    largePageDataWarnings.add(__NEXT_DATA__.page);
+                }
                 console.warn(`Warning: data for page "${__NEXT_DATA__.page}"${__NEXT_DATA__.page === context.dangerousAsPath ? "" : ` (path "${context.dangerousAsPath}")`} is ${prettyBytes(bytes)} which exceeds the threshold of ${prettyBytes(largePageDataBytes)}, this amount of data can reduce performance.\nSee more info here: https://nextjs.org/docs/messages/large-page-data`);
             }
             return (0, _htmlescape).htmlEscapeJsonString(data);
@@ -696,6 +722,31 @@ const InternalFunctionDocument = function InternalFunctionDocument() {
 };
 Document[_constants.NEXT_BUILTIN_DOCUMENT] = InternalFunctionDocument; //# sourceMappingURL=_document.js.map
 
+
+/***/ }),
+
+/***/ 676:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({
+    value: true
+}));
+exports["default"] = isError;
+exports.getProperError = getProperError;
+var _isPlainObject = __webpack_require__(8524);
+function isError(err) {
+    return typeof err === "object" && err !== null && "name" in err && "message" in err;
+}
+function getProperError(err) {
+    if (isError(err)) {
+        return err;
+    }
+    if (false) {}
+    return new Error((0, _isPlainObject).isPlainObject(err) ? JSON.stringify(err) : err + "");
+}
+
+//# sourceMappingURL=is-error.js.map
 
 /***/ }),
 
@@ -827,7 +878,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [676], () => (__webpack_exec__(7081)));
+var __webpack_exports__ = (__webpack_exec__(2940));
 module.exports = __webpack_exports__;
 
 })();

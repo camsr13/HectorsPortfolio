@@ -4,7 +4,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 6508:
+/***/ 6386:
 /***/ ((module) => {
 
 // Exports
@@ -18,7 +18,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2452:
+/***/ 2011:
 /***/ ((module) => {
 
 // Exports
@@ -30,7 +30,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4852:
+/***/ 1003:
 /***/ ((module) => {
 
 // Exports
@@ -45,7 +45,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5522:
+/***/ 4666:
 /***/ ((module) => {
 
 // Exports
@@ -57,7 +57,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 498:
+/***/ 9200:
 /***/ ((module) => {
 
 // Exports
@@ -71,7 +71,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9024:
+/***/ 9302:
 /***/ ((module) => {
 
 // Exports
@@ -87,7 +87,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 723:
+/***/ 765:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -96,7 +96,7 @@ module.exports = {
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_Footer_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4852);
+/* harmony import */ var _styles_Footer_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1003);
 /* harmony import */ var _styles_Footer_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_Footer_module_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -140,7 +140,7 @@ function Footer() {
 
 /***/ }),
 
-/***/ 2277:
+/***/ 1376:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -153,7 +153,7 @@ __webpack_require__.d(__webpack_exports__, {
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(997);
 // EXTERNAL MODULE: ./styles/Header.module.css
-var Header_module = __webpack_require__(5522);
+var Header_module = __webpack_require__(4666);
 var Header_module_default = /*#__PURE__*/__webpack_require__.n(Header_module);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(6689);
@@ -162,7 +162,7 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var next_link = __webpack_require__(1664);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 // EXTERNAL MODULE: ./styles/AnnouncementBar.module.css
-var AnnouncementBar_module = __webpack_require__(6508);
+var AnnouncementBar_module = __webpack_require__(6386);
 var AnnouncementBar_module_default = /*#__PURE__*/__webpack_require__.n(AnnouncementBar_module);
 ;// CONCATENATED MODULE: ./components/AnnouncementBar.js
 
@@ -202,7 +202,7 @@ const NoSsr = (props)=>/*#__PURE__*/ jsx_runtime_.jsx((external_react_default())
 }));
 
 // EXTERNAL MODULE: ./styles/CurrentTime.module.css
-var CurrentTime_module = __webpack_require__(2452);
+var CurrentTime_module = __webpack_require__(2011);
 var CurrentTime_module_default = /*#__PURE__*/__webpack_require__.n(CurrentTime_module);
 ;// CONCATENATED MODULE: ./components/CurrentTime.js
 
@@ -230,7 +230,7 @@ function CurrentTime() {
 }
 
 // EXTERNAL MODULE: ./styles/MobileNavigation.module.css
-var MobileNavigation_module = __webpack_require__(498);
+var MobileNavigation_module = __webpack_require__(9200);
 var MobileNavigation_module_default = /*#__PURE__*/__webpack_require__.n(MobileNavigation_module);
 ;// CONCATENATED MODULE: ./components/MobileNavigation.js
 
@@ -343,7 +343,7 @@ function Header({ content  }) {
 
 /***/ }),
 
-/***/ 3412:
+/***/ 7345:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -356,9 +356,9 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(968);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2277);
-/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(723);
-/* harmony import */ var _Navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9657);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1376);
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(765);
+/* harmony import */ var _Navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(10);
 
 
 
@@ -417,7 +417,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 9657:
+/***/ 10:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -426,7 +426,7 @@ __webpack_async_result__();
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_Navigation_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9024);
+/* harmony import */ var _styles_Navigation_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9302);
 /* harmony import */ var _styles_Navigation_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_Navigation_module_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1664);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
@@ -478,7 +478,7 @@ function Navigation({ content  }) {
 
 /***/ }),
 
-/***/ 8484:
+/***/ 6004:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -491,7 +491,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6764);
 /* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3412);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7345);
 /* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4298);
 /* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_script__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6197);
@@ -576,43 +576,11 @@ module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
-/***/ 8524:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/is-plain-object.js");
-
-/***/ }),
-
 /***/ 5832:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/shared/lib/loadable.js");
-
-/***/ }),
-
-/***/ 8020:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/mitt.js");
-
-/***/ }),
-
-/***/ 7342:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/no-ssr-error.js");
-
-/***/ }),
-
-/***/ 4406:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/page-path/denormalize-page-path.js");
 
 /***/ }),
 
@@ -640,22 +608,6 @@ module.exports = require("next/dist/shared/lib/router/utils/add-path-prefix.js")
 
 /***/ }),
 
-/***/ 6220:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/compare-states.js");
-
-/***/ }),
-
-/***/ 299:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/format-next-pathname-info.js");
-
-/***/ }),
-
 /***/ 3938:
 /***/ ((module) => {
 
@@ -664,35 +616,11 @@ module.exports = require("next/dist/shared/lib/router/utils/format-url.js");
 
 /***/ }),
 
-/***/ 9565:
+/***/ 1109:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
-
-/***/ }),
-
-/***/ 5789:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/get-next-pathname-info.js");
-
-/***/ }),
-
-/***/ 1897:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/is-bot.js");
-
-/***/ }),
-
-/***/ 1428:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
+module.exports = require("next/dist/shared/lib/router/utils/is-local-url.js");
 
 /***/ }),
 
@@ -704,30 +632,6 @@ module.exports = require("next/dist/shared/lib/router/utils/parse-path.js");
 
 /***/ }),
 
-/***/ 1292:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
-
-/***/ }),
-
-/***/ 4567:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/path-has-prefix.js");
-
-/***/ }),
-
-/***/ 979:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
-
-/***/ }),
-
 /***/ 3297:
 /***/ ((module) => {
 
@@ -736,27 +640,11 @@ module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slas
 
 /***/ }),
 
-/***/ 6052:
+/***/ 7782:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/shared/lib/router/utils/resolve-rewrites.js");
-
-/***/ }),
-
-/***/ 4226:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
-
-/***/ }),
-
-/***/ 5052:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
+module.exports = require("next/dist/shared/lib/router/utils/resolve-href.js");
 
 /***/ }),
 
@@ -815,7 +703,7 @@ module.exports = import("framer-motion");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [210,676,664,927], () => (__webpack_exec__(8484)));
+var __webpack_exports__ = __webpack_require__.X(0, [210,664,927], () => (__webpack_exec__(6004)));
 module.exports = __webpack_exports__;
 
 })();
