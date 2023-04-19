@@ -44,6 +44,7 @@ html,
 body { 
   font-size: 18px !important;
   font-family: 'neue-haas-grotesk-text', Helvetica;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
