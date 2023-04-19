@@ -108,6 +108,7 @@ export default function Project(props) {
                   placeholder="blur"
                   blurDataURL={urlFor(image.image).width(1500).url()}
                   alt={projectContent.title}
+                  loading="lazy"
                 />
               </div>
             </Fragment>

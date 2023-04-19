@@ -24,6 +24,7 @@ export default function HomePageImage({ image }) {
           alt="Fergus Haywood Homepage Gif Image"
           placeholder="blur"
           blurDataURL={urlFor(homepageImage).url()}
+          loading="lazy"
         />
       )}
     </div>

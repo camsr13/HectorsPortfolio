@@ -2,6 +2,7 @@ import styles from '../styles/Clients.module.css'
 import { useState, useEffect } from 'react'
 import imageUrlBuilder from '@sanity/image-url'
 import { Fragment } from 'react'
+import Image from 'next/image'
 
 export default function Clients(props) {
   const [clientContent, setClientContent] = useState({})
@@ -76,10 +77,20 @@ export default function Clients(props) {
       <div className={styles.clientContent}>
         {hasContent && (
           <>
-            <img
-              src={urlFor(clientContent.mainImage)}
-              className={styles.clientImage}
-            />
+            <div className={styles.clientImageContainer}>
+              <Image
+                src={urlFor(clientContent.mainImage)
+                  .width(1500)
+                  .quality(100)
+                  .url()}
+                className={styles.clientImage}
+                layout="fill"
+                objectFit="cover"
+                blurDataURL={urlFor(clientContent.mainImage).width(1500).url()}
+                alt={clientContent.title}
+                loading="lazy"
+              />
+            </div>
             <div className={styles.clientDisciplines}>
               {clientContent.disciplines}
             </div>
