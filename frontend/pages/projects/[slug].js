@@ -128,8 +128,6 @@ export async function getStaticPaths() {
     params: { slug: project.id },
   }))
 
-  console.log(paths)
-
   return {
     paths,
     fallback: false,
@@ -153,6 +151,6 @@ export async function getStaticProps(context) {
       project,
       projects,
     },
-    revalidate: 10,
+    revalidate: 1,
   }
 }

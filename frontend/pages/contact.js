@@ -56,7 +56,6 @@ export default function Contact() {
         method: 'post',
         body: JSON.stringify(data),
       })
-      console.log(res)
       const { error } = await res.json()
       if (error) {
         console.log(error)

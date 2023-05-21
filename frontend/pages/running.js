@@ -1,5 +1,4 @@
 import styles from '../styles/Running.module.css'
-import { router } from 'next/router'
 
 export default function Running({ data }) {
   const runningData = data.all_run_totals
