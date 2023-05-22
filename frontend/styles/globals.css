@@ -196,19 +196,26 @@ a {
 }
 
 .mobileNavWrapper { 
-  margin-top: 30px;
+  top: 60px;
   display: grid;
   grid-column: 1 / span 5;
   grid-template-columns: repeat(5, 1fr);
-  display: none;
+  display: grid;
+  position: absolute;
   opacity: 0;
-  transition: opacity var(--short-transition);
+  visibility: hidden;
+  transition: opacity var(--short-transition) 150ms, visibility var(--short-transition) 150ms;
 }
 
 .mobileNavWrapper.is-active { 
-  display: grid;
   opacity: 1;
-  transition: opacity var(--short-transition);
+  visibility: visible;
+}
+
+.Header_wrapper__jiYD5.is-active { 
+  height: 165px;
+  transition: height var(--short-transition);
+
 }
 
 .main-wrapper { 

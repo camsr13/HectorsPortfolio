@@ -17,7 +17,7 @@ export default function Header({ content }) {
 
   return (
     <>
-      <header className={styles.wrapper}>
+      <header className={`${styles.wrapper} ${isActive ? 'is-active' : ''}`}>
         <h1 className={styles.title}>
           <Link legacyBehavior href="/">
             <a onClick={() => handleClick()}>Fergus Haywood</a>
