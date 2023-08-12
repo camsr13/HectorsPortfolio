@@ -224,7 +224,22 @@ a {
   margin-top: 180px;
   padding-inline: 30px;
   width: 100%;
+}
+
+.under-header {
+  width: 100%;
+  display: flex;
+  margin-top: 180px;
   height: fit-content;
+  
+}
+
+.left-side {
+  width: 30%;
+}
+
+.right-side {
+  width: 70%;
 }
 
 .mobile-page-title { 

@@ -6,7 +6,8 @@ export default function Navigation({ content }) {
   }
 
   const mainNav = content.result[0][0].navItems
-  const socialNav = content.result[0][1].navItems
+  const socialNav = content.result[0][0].navItems
+ 
 
   return (
     <>

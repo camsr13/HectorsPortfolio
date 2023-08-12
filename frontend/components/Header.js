@@ -20,7 +20,7 @@ export default function Header({ content }) {
       <header className={`${styles.wrapper} ${isActive ? 'is-active' : ''}`}>
         <h1 className={styles.title}>
           <Link legacyBehavior href="/">
-            <a onClick={() => handleClick()}>Fergus Haywood</a>
+            <a onClick={() => handleClick()}>Cameron Richards</a>
           </Link>
         </h1>
         <AnnouncementBar />

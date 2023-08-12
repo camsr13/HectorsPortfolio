@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function MobileNavigation({ items, isActive, setActive }) {
   const mainNav = items.result[0][0].navItems
-  const socialNav = items.result[0][1].navItems
+  const socialNav = items.result[0][0].navItems
 
   const [menuStatus, setMenuStatus] = useState('Menu')
 

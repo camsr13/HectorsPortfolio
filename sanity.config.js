@@ -17,7 +17,7 @@ import projectImages from './studio/schemas/objects/projectImages'
 import projectDisciplines from './studio/schemas/objects/projectDisciplines'
 
 export default defineConfig({
-  projectId: '36om7i3d',
+  projectId: 'vgbsv8ys',
   basePath: '/studio',
   dataset: 'production',
   plugins: [deskTool(), visionTool()],

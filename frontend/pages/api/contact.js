@@ -12,8 +12,8 @@ export default async (req, res) => {
   `
 
   const data = {
-    to: 'hello@fergushaywood.com',
-    from: 'fergus.haywood5@gmail.com',
+    to: 'hello@cameronrichards.com',
+    from: 'camsr13@gmail.com',
     subject: `New Website Contact Form Submitted`,
     text: message,
     html: message.replace(/\r\n/g, '<br />'),

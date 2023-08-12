@@ -24,18 +24,22 @@ export default function Layout({ children }) {
         />
       </Head>
 
-      <Navigation content={navContent} />
-      <Header content={navContent} />
+    <aside className="left-side"></aside>
 
+    <div className="right-side">
+      <Header content={navContent} />
       <main className="main-wrapper">{children}</main>
-      <Footer />
+      <Footer content={navContent} />
+      
+    </div>
+
     </>
   )
 }
 
 export async function fetchData() {
   const navigationQuery = encodeURIComponent(`*[ _type == 'navigation']`)
-  const navigationURL = `https://36om7i3d.api.sanity.io/v1/data/query/production?query=[${navigationQuery}]`
+  const navigationURL = `https://vgbsv8ys.api.sanity.io/v1/data/query/production?query=[${navigationQuery}]`
   const navigationBody = await fetch(navigationURL).then((res) => res.json())
   const settingsQuery = encodeURIComponent(`*[ _type == 'siteConfig']`)
   const settingsURL = `https://36om7i3d.api.sanity.io/v1/data/query/production?query=[${settingsQuery}]`

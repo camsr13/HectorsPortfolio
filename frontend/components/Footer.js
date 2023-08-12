@@ -1,32 +1,45 @@
 import styles from '../styles/Footer.module.css'
+import Link from 'next/link'
 
-import { useState } from 'react'
-
-export default function Footer() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+export default function Footer({ content }) {
 
   function handleClick() {
-    setIsDarkMode(!isDarkMode)
-    const root = document.documentElement
-    if (isDarkMode) {
-      root.style.setProperty('--background-color', 'var(--light-background)')
-      root.style.setProperty('--color', '#000000')
-    } else {
-      root.style.setProperty('--background-color', 'var(--dark-background)')
-      root.style.setProperty('--color', '#FFFFFF')
-    }
+    document.body.removeAttribute('style')
   }
+
+  const mainNav = content.result[0][1].navItems
+  const socialNav = content.result[0][0].navItems
+
   return (
     <footer className={styles.wrapper}>
-      <div className={styles.themePicker}>
-        <span
-          className={styles.themeToggle}
-          onClick={() => handleClick()}
-        ></span>
-      </div>
+      <ul className={styles.mainNavItemList}>
+        {mainNav.map((item, i) => {
+          return (
+            <li
+              id={item.text}
+              key={item.text}
+              className={styles.mainNavItem}
+              onClick={() => handleClick()}
+            >
+              <Link href={`/${item.navItemUrl.linkUrl}`}>{item.text}</Link>
+            </li>
+          )
+        })}
+      </ul>
       <div className={styles.footerEmail}>
-        <a href="mailto:hello@fergushaywood.com">hello@fergushaywood.com</a>
+        <a href="mailto:camsr13@gmail.com">camsr13@gmail.com</a>
       </div>
+      <ul className={styles.socialNavItemList}>
+          {socialNav.map((item, i) => {
+            return (
+              <li key={item.text} className={styles.socialNavItem}>
+                <a target="_blank" href={item.navItemUrl.linkUrl}>
+                  {item.text}
+                </a>
+              </li>
+            )
+          })}
+        </ul>
     </footer>
   )
 }

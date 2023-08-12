@@ -115,8 +115,8 @@ export default function Contact() {
             {showFailureMessage && (
               <p>
                 Sorry there was an error, please{' '}
-                <a href="mailto:hello@fergushaywood.com">email me</a> instead at
-                <a href="mailto:hello@fergushaywood.com">hello@fergushaywood</a>
+                <a href="mailto:camsr13@gmail.com">email me</a> instead at
+                <a href="mailto:camsr13@gmail.com">camsr13@gmail.com</a>
               </p>
             )}
           </div>
