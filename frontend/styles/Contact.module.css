@@ -9,20 +9,22 @@
   }
   
 .contactForm { 
-  grid-column: 5 / span 6;
+  grid-column: 5 / span 7;
   display: flex;
+  position: relative;
   }
 
 .contactFormMain { 
-  width: 80%;
-  float: left;
+  width: 75%;
+  left:0;
+  
 }
 
 .contactFormSend { 
   width: 20%;
-  float: right;
+  right:0;
   bottom: 0;
-  position: relative;
+  position: absolute;
 }
 
 @media all and (max-width: 990px ) { 
