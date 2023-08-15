@@ -1,0 +1,36 @@
+.contactWrapper { 
+    grid-column: 1 / span 10;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+  }
+  
+.contactText { 
+    grid-column: 1 / span 3;
+  }
+  
+.contactForm { 
+  grid-column: 5 / span 6;
+  display: flex;
+  }
+
+.contactFormMain { 
+  width: 80%;
+  float: left;
+}
+
+.contactFormSend { 
+  width: 20%;
+  float: right;
+  bottom: 0;
+  position: relative;
+}
+
+@media all and (max-width: 990px ) { 
+    .contactText { 
+        grid-column: 1 / span 10;
+      }
+    
+    .contactForm { 
+      grid-column: 1 / span 10;
+    }
+}

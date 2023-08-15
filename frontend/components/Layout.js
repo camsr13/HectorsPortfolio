@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from './Header'
+import Name from './Name'
 import Footer from './Footer'
 import Navigation from './Navigation'
 
@@ -24,15 +25,18 @@ export default function Layout({ children }) {
         />
       </Head>
 
-    <aside className="left-side"></aside>
+    <div className >
+      <div className="left-side">
+        <Name />
+      </div>
 
-    <div className="right-side">
-      <Header content={navContent} />
-      <main className="main-wrapper">{children}</main>
-      <Footer content={navContent} />
-      
+      <div className="right-side">
+        <Header content={navContent} />
+        <main className="main-wrapper">{children}</main>
+        <Footer content={navContent} />
+        
+      </div>
     </div>
-
     </>
   )
 }

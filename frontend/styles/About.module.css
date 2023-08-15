@@ -1,7 +1,6 @@
 
-.aboutContent { 
-  grid-column: 3 / span 3;
-  height: fit-content;
+.aboutContent {
+  grid-column: 5 / span 4;
 }
 
 .aboutContent p { 

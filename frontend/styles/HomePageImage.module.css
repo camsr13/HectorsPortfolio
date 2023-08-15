@@ -1,12 +1,11 @@
 .wrapper { 
-grid-column: 7 / span 4;
+grid-column: 1 / span 3;
 }
 
 .image { 
     object-fit: contain;
     width: 100% !important;
     position: relative !important;
-    height: unset !important
    }
 
    @media all and (max-width: 990px ) { 
