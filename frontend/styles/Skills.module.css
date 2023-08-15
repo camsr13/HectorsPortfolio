@@ -1,0 +1,11 @@
+.skillsContent {
+    grid-column: 1 / span 6;
+    padding-top: 200px;
+    position: relative;
+  }
+
+.skillsHeading{
+  font-size: 14px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}

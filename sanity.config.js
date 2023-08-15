@@ -10,6 +10,7 @@ import navigation from './studio/schemas/documents/navigation'
 import siteConfig from './studio/schemas/siteConfig'
 import Clients from './studio/schemas/documents/Clients'
 import About from './studio/schemas/documents/About'
+import Skills from './studio/schemas/documents/Skills'
 import Projects from './studio/schemas/documents/Projects'
 import navItem from './studio/schemas/objects/navItem'
 import link from './studio/schemas/objects/link'
@@ -26,6 +27,7 @@ export default defineConfig({
       navigation,
       Clients,
       About,
+      Skills,
       siteConfig,
       navItem,
       link,
