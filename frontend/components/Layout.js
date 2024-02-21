@@ -46,7 +46,7 @@ export async function fetchData() {
   const navigationURL = `https://vgbsv8ys.api.sanity.io/v1/data/query/production?query=[${navigationQuery}]`
   const navigationBody = await fetch(navigationURL).then((res) => res.json())
   const settingsQuery = encodeURIComponent(`*[ _type == 'siteConfig']`)
-  const settingsURL = `https://36om7i3d.api.sanity.io/v1/data/query/production?query=[${settingsQuery}]`
+  const settingsURL = `https://vgbsv8ys.api.sanity.io/v1/data/query/production?query=[${settingsQuery}]`
   const settingsBody = await fetch(settingsURL).then((res) => res.json())
 
   return {

@@ -15,7 +15,7 @@ export default function MobileProjectSlideshow({ project }) {
   }
 
   const imgBuilder = imageUrlBuilder({
-    projectId: '36om7i3d',
+    projectId: 'vgbsv8ys',
     dataset: 'production',
   })
 

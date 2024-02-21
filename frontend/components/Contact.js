@@ -49,7 +49,7 @@ export default function Contact() {
               id="message"
               type="text"
               required
-              rows="4"
+              rows="8"
               onChange={(e) => setMessage(e.target.value)}
             />
           </form>

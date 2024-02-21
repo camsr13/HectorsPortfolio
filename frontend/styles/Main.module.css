@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   margin-top: 180px;
-  padding-inline: 30px;
 }
 
 .mainContent { 
@@ -17,7 +16,6 @@
   .wrapper { 
     margin-top: 100px;
     height: 100vh;
-    padding-inline: 15px;
     height: 100vh;
   }
 

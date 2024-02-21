@@ -18,7 +18,7 @@ export default function Project(props) {
   }
 
   const imgBuilder = imageUrlBuilder({
-    projectId: '36om7i3d',
+    projectId: 'vgbsv8ys',
     dataset: 'production',
   })
 
@@ -121,7 +121,7 @@ export default function Project(props) {
 
 export async function getStaticPaths() {
   const projectsQuery = encodeURIComponent(`*[ _type == 'projects' ]`)
-  const projectsURL = `https://36om7i3d.api.sanity.io/v1/data/query/production?query=[${projectsQuery}]`
+  const projectsURL = `https://vgbsv8ys.api.sanity.io/v1/data/query/production?query=[${projectsQuery}]`
   const projects = await fetch(projectsURL).then((res) => res.json())
 
   const paths = projects.result[0].map((project) => ({
@@ -136,14 +136,14 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const projectsQuery = encodeURIComponent(`*[ _type == 'projects' ]`)
-  const projectsURL = `https://36om7i3d.api.sanity.io/v1/data/query/production?query=[${projectsQuery}]`
+  const projectsURL = `https://vgbsv8ys.api.sanity.io/v1/data/query/production?query=[${projectsQuery}]`
   const projects = await fetch(projectsURL).then((res) => res.json())
 
   const { slug = '' } = context.params
   const projectQuery = encodeURIComponent(
     `*[ _type == 'projects' && id == '${slug}']`
   )
-  const projectURL = `https://36om7i3d.api.sanity.io/v1/data/query/production?query=[${projectQuery}]`
+  const projectURL = `https://vgbsv8ys.api.sanity.io/v1/data/query/production?query=[${projectQuery}]`
   const project = await fetch(projectURL).then((res) => res.json())
 
   return {
