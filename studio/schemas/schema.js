@@ -11,7 +11,6 @@ import navigation from './documents/navigation'
 import siteConfig from './siteConfig'
 import Clients from './documents/Clients'
 import About from './documents/About'
-import Skills from './documents/Skills'
 import Projects from './documents/Projects'
 
 //Object Types
@@ -32,7 +31,6 @@ export default createSchema({
     navigation,
     Clients,
     About,
-    Skills,
     siteConfig,
     navItem,
     link,

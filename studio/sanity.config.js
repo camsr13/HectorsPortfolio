@@ -6,7 +6,7 @@ import { schemaTypes } from './schemas/schema'
 export default defineConfig({
   name: 'personal-project',
   title: 'Personal Website',
-  projectId: 'vgbsv8ys',
+  projectId: 'mzjkcltq',
   dataset: 'production',
   plugins: [deskTool()],
   schema: {

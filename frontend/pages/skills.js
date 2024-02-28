@@ -10,7 +10,7 @@ export default function SkillsSet(props) {
 
 export async function getStaticProps() {
   const skillsQuery = encodeURIComponent(`*[ _type == 'skills']`)
-  const skillsURL = `https://vgbsv8ys.api.sanity.io/v1/data/query/production?query=[${skillsQuery}]`
+  const skillsURL = `https://mzjkcltq.api.sanity.io/v1/data/query/production?query=[${skillsQuery}]`
   const skillsBody = await fetch(skillsURL).then((res) => res.json())
   return {
     props: {

@@ -24,7 +24,7 @@ export default function Projects({ projects }) {
     setProjectContent(content)
   }
   const imgBuilder = imageUrlBuilder({
-    projectId: 'vgbsv8ys',
+    projectId: 'mzjkcltq',
     dataset: 'production',
   })
 

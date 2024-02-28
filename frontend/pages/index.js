@@ -12,7 +12,7 @@ export default function Home(props) {
 
 export async function getStaticProps() {
   const aboutQuery = encodeURIComponent(`*[ _type == 'about']`)
-  const aboutURL = `https://vgbsv8ys.api.sanity.io/v1/data/query/production?query=[${aboutQuery}]`
+  const aboutURL = `https://mzjkcltq.api.sanity.io/v1/data/query/production?query=[${aboutQuery}]`
   const aboutBody = await fetch(aboutURL).then((res) => res.json())
   return {
     props: {

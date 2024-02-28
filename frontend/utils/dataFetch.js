@@ -7,6 +7,6 @@ export default async function fetchData(query, id) {
       `*[ _type == '${query}' && id == '${id}']`
     )
   }
-  const projectURL = `https://vgbsv8ys.api.sanity.io/v1/data/query/production?query=[${originalQuery}]`
+  const projectURL = `https://mzjkcltq.api.sanity.io/v1/data/query/production?query=[${originalQuery}]`
   return await fetch(projectURL).then((res) => res.json())
 }

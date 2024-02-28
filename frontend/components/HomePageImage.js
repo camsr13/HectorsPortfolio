@@ -10,7 +10,7 @@ export default function HomePageImage({ image }) {
   }
 
   const imgBuilder = imageUrlBuilder({
-    projectId: 'vgbsv8ys',
+    projectId: 'mzjkcltq',
     dataset: 'production',
   })
 
