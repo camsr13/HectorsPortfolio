@@ -18,7 +18,9 @@ export default function Header({ content }) {
   return (
     <>
       <header className={`${styles.wrapper} ${isActive ? 'is-active' : ''}`}>
-        <h1 className={styles.title}><br />Creative <br /> Solutions</h1>
+        <div> Hector Clarke </div>
+        <div> About </div>
+        <div> Index </div>
         <CurrentTime />
         <MobileNavigation
           items={content}

@@ -11,7 +11,7 @@ export default function Name({ content }) {
   return (
     <>
       <header>
-        <h1 className={styles.title}>Cameron <br /> Richards:</h1>
+        <h1 className={styles.title}>Hector Clarke</h1>
       </header>
     </>
   )

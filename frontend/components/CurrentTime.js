@@ -7,13 +7,22 @@ export default function CurrentTime() {
   return (
     <NoSsr>
       <div className={styles.wrapper}>
-        <h4><br/> Te Whanganui-a-Tara, Aoteroa</h4>
-        <Moment
-          className={styles.time}
-          tz="Pacific/Auckland"
-          interval="1000"
-          format="hh:mm:ss a"
-        />
+        <h4> EST   
+          <Moment
+            className={styles.time}
+            tz="Australia/Sydney"
+            interval="1000"
+            format="hh:mm:ss a"
+          />
+        </h4>
+        <h4> MEL   
+          <Moment
+            className={styles.time}
+            tz="Australia/Melbourne"
+            interval="1000"
+            format="hh:mm:ss a"
+          />
+        </h4>
       </div>
     </NoSsr>
   )

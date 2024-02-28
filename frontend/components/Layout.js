@@ -26,9 +26,6 @@ export default function Layout({ children }) {
       </Head>
 
     <div className >
-      <div className="left-side">
-        <Name />
-      </div>
 
       <div className="right-side">
         <Header content={navContent} />
